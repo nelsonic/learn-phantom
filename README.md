@@ -3,7 +3,7 @@ learn-phantom
 
 PhantomJS lets us simulate a full web browser in your command line tests. #Win!
 
-## WHY?
+### WHY?
 
 If you are building anything web-based and *not* doing
 automated (full-stack) testing, PhantomJS is a *great* tool to learn!
@@ -13,7 +13,7 @@ Namely refreshing pages and clicking through interactions to confirm
 they are working as desired (*thousands* of times...!)
 
 
-## WHAT does "*Scriptable Headless WebKit*" Mean...?
+### WHAT does "*Scriptable Headless WebKit*" Mean...?
 
 - [WebKit](https://github.com/WebKit/webkit) is the *most popular web browser*.
 It is [OpenSource](https://github.com/WebKit/webkit) and 
@@ -27,7 +27,7 @@ You can interact with the PhantomJS "Browser" entirely through code
 without ever having to "view" the web pages.
 
 
-## WHO Can/Should Use PhantomJS?
+### WHO Can/Should Use PhantomJS?
 
 ***Everyone*** that is not commandline-phobic and wants streamline their 
 web/app development. As you will see from this simple/quick/easy tutorial 
@@ -75,9 +75,14 @@ you should now see a screenshot in your current directory! Yay! :-)
 ## Useful Links
 
 - Website: http://phantomjs.org/
+- Quick Start: http://phantomjs.org/quick-start.html
 - Examplese: http://phantomjs.org/examples/
 - GitHub:  https://github.com/ariya/phantomjs
 
 ### Tutorials
 
 - Build Podcast PhantomJS Ep: http://build-podcast.com/phantomjs/
+
+### Interesting Side Notes
+
+- Color Wheel HTML5 Canvas drawing: https://github.com/ariya/phantomjs/blob/master/examples/colorwheel.js
