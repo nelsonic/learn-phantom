@@ -98,4 +98,8 @@ http://docs.casperjs.org/en/latest/modules/casper.html
 
 But... I will investigate using Zombie.js before that
 http://zombie.labnotes.org/
+It kind of annoys me that Zombie (only) has **87%** code coverage: 
+http://zombie.labnotes.org/coverage
+
+
 http://www.amazon.co.uk/Using-Node-js-Testing-Pedro-Teixeira/dp/1782160523/
