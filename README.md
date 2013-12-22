@@ -72,6 +72,11 @@ Run this code from your command line by typing: `phantomjs example.js`
 
 you should now see a screenshot in your current directory! Yay! :-)
 
+> It has dawned on me that PhantomJS is on the Tip of the Iceberg!
+> And that I will have to learn CasperJS to get the *real* power...
+> http://docs.casperjs.org/en/latest/modules/casper.html
+
+
 ## Useful Links
 
 - Website: http://phantomjs.org/
