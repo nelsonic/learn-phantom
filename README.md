@@ -22,9 +22,10 @@ used by (Apple) **Safari** and (Google) **Chrome** *both* **Desktop**
 websites.
 - Scriptable: you can write instructions for the browser to perfomr 
 (e.g. visit this page, click on this link, fill in that form etc.)
-- Headless: No *visual* window is required. Images output is optional. 
+- Headless: A web browser without a *visual* "window". 
 You can interact with the PhantomJS "Browser" entirely through code 
-without ever having to "view" the web pages.
+without ever having to "view" the web pages. Images output is optional. 
+*More detail*: http://blog.arhg.net/2009/10/what-is-headless-browser.html
 
 
 ### WHO Can/Should Use PhantomJS?
@@ -72,10 +73,6 @@ Run this code from your command line by typing: `phantomjs example.js`
 
 you should now see a screenshot in your current directory! Yay! :-)
 
-> It has dawned on me that PhantomJS is on the Tip of the Iceberg!
-> And that I will have to learn CasperJS to get the *real* power...
-> http://docs.casperjs.org/en/latest/modules/casper.html
-
 
 ## Useful Links
 
@@ -90,4 +87,15 @@ you should now see a screenshot in your current directory! Yay! :-)
 
 ### Interesting Side Notes
 
-- Color Wheel HTML5 Canvas drawing: https://github.com/ariya/phantomjs/blob/master/examples/colorwheel.js
+- Color Wheel HTML5 Canvas drawing: 
+https://github.com/ariya/phantomjs/blob/master/examples/colorwheel.js
+
+## Next
+
+It has *dawned* on me that PhantomJS is only the Tip of the Iceberg!
+And that I will have to learn CasperJS to get the *real* power...
+http://docs.casperjs.org/en/latest/modules/casper.html
+
+But... I will investigate using Zombie.js before that
+http://zombie.labnotes.org/
+http://www.amazon.co.uk/Using-Node-js-Testing-Pedro-Teixeira/dp/1782160523/
