@@ -100,6 +100,7 @@ But... I will investigate using Zombie.js before that
 http://zombie.labnotes.org/
 It kind of annoys me that Zombie (only) has **87%** code coverage: 
 http://zombie.labnotes.org/coverage
+But I don't want to have to *write* my own headless tester... :-(
 
-
+> Pedro Teixeira has a great introduction book to UI testing:
 http://www.amazon.co.uk/Using-Node-js-Testing-Pedro-Teixeira/dp/1782160523/
