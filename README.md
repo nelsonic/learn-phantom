@@ -104,7 +104,8 @@ page.open(url, function() {
 var page = require('webpage').create(),
     url = 'http://www.google.com/mobile/';
 page.open(url, function() {
-  page.viewportSize = { width: 640, height: 960 };
+  page.viewportSize = { width: 640, height: 960 }; // restrict page width
+  page.clipRect = { top: 0, left: 0, width: 640, height: 960  }; // screenshot size
   page.render('google-iphone4.png');
   phantom.exit()
 });
@@ -117,6 +118,14 @@ only constrained the width so the screenshot was full height. (useful
 but not what I wanted...) so I had to add the **page.clipRect**
 - https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage#wiki-webpage-viewportSize
 - https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage#wiki-webpage-clipRect
+
+I've just noticed that the 640x960px (iPhone 4 size) screenshot is 109kb!
+Might need to re-think my plan to take a screenshot for *every* action/test...
+This could become expensive (image storage!) :-(
+Cross that bridge when we get there. 
+Back of the envelope calculation:
+110 kb x **100k images** = (110,000 x 100,000) = 11,000,000,000
+**11Gb** is 10 cents per month. its *all* good.
 
 ## Useful Links
 
