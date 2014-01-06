@@ -17,7 +17,7 @@ they are working as desired (*thousands* of times...!)
 
 - [WebKit](https://github.com/WebKit/webkit) is the *most popular web browser*.
 It is [OpenSource](https://github.com/WebKit/webkit) and 
-used by (Apple) **Safari** and (Google) **Chrome** *both* **Desktop**
+used by (Apple) **Safari** and (Google) **Chrome** *both* **Desktop** & 
 **Mobile** (iOS/Android/Blackberry) which makes it perfect for ***testing*** 
 websites.
 - Scriptable: you can write instructions for the browser to perfomr 
@@ -53,7 +53,7 @@ brew update && brew install phantomjs
 
 To confirm that you have installed phantomjs, type: `which phantomjs`
 in your terminal window.
-![which phantomjs](http://i.imgur.com/wd5RsOV.png "which phantomjs")
+<!-- ![which phantomjs](http://i.imgur.com/wd5RsOV.png "which phantomjs") -->
 
 
 ## Basic usage
@@ -69,9 +69,35 @@ page.open('http://google.com', function() {
 });
 ```
 
-Run this code from your command line by typing: `phantomjs example.js`
+Run this code from your command line by typing: `phantomjs examples/example.js`
 
 you should now see a screenshot in your current directory! Yay! :-)
+
+##  Using JQuery (or Zepto) to Click on Links
+
+The **page.includeJs** method allows us to include an external JS file.
+In our case we are including ZeptoJS and using the .click() method 
+to click a button on the page.
+
+```javascript
+var page = require('webpage').create(),
+    url = 'http://nelsonic.s3.amazonaws.com/learn-phantom/examples/project/index.html';
+page.open(url, function() {
+    page.includeJs("http://zeptojs.com/zepto.min.js", function() {
+        page.evaluate(function(page) {
+            $('#color').click(); // this changes the page's background color.
+        });
+        page.render('blue-background.png');
+        console.log("clicked on #color on " +url);
+        phantom.exit()
+    });
+});
+```
+
+https://github.com/ariya/phantomjs/wiki/Page-Automation
+
+
+
 
 
 ## Useful Links
@@ -104,3 +130,5 @@ But I don't want to have to *write* my own headless tester... :-(
 
 > Pedro Teixeira has a great introduction book to UI testing:
 http://www.amazon.co.uk/Using-Node-js-Testing-Pedro-Teixeira/dp/1782160523/
+
+- Phantom + Mocha: https://github.com/metaskills/mocha-phantomjs
