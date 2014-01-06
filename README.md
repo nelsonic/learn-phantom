@@ -73,7 +73,7 @@ Run this code from your command line by typing: `phantomjs examples/example.js`
 
 you should now see a screenshot in your current directory! Yay! :-)
 
-##  Using JQuery (or Zepto) to Click on Links
+## Using JQuery (or *Zepto*) to Click on Links
 
 The **page.includeJs** method allows us to include an external JS file.
 In our case we are including ZeptoJS and using the .click() method 
@@ -93,12 +93,30 @@ page.open(url, function() {
     });
 });
 ```
+### Notes
+- https://github.com/ariya/phantomjs/wiki/Page-Automation
+- https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage#wiki-webpage-evaluate
 
-https://github.com/ariya/phantomjs/wiki/Page-Automation
 
+## Specify Viewport Width/Heigh (for Mobile Web Testing)
 
+```
+var page = require('webpage').create(),
+    url = 'http://www.google.com/mobile/';
+page.open(url, function() {
+  page.viewportSize = { width: 640, height: 960 };
+  page.render('google-iphone4.png');
+  phantom.exit()
+});
 
+```
 
+### Notes
+- I tried using only the **page.viewportSize** property but that 
+only constrained the width so the screenshot was full height. (useful
+but not what I wanted...) so I had to add the **page.clipRect**
+- https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage#wiki-webpage-viewportSize
+- https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage#wiki-webpage-clipRect
 
 ## Useful Links
 

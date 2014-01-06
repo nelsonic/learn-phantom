@@ -5,7 +5,7 @@ page.open(url, function() {
         page.evaluate(function(page) {
             $('#color').click(); // this changes the page's background color.
         });
-        page.render('blue-background.png');
+        page.render('blue-background.png'); // expect a blue background
         console.log("clicked on #color on " +url);
         phantom.exit()
     });
