@@ -126,7 +126,15 @@ But... I will investigate using Zombie.js before that
 http://zombie.labnotes.org/
 It kind of annoys me that Zombie (only) has **87%** code coverage: 
 http://zombie.labnotes.org/coverage
+
 But I don't want to have to *write* my own headless tester... :-(
+
+... I say I *don't* want to write my own tester ...
+
+I had a read through the CasperJS API 
+http://docs.casperjs.org/en/latest/modules/casper.html
+There are *lots* of useful methods. 
+But most of them are *way* beyond the scope of a simple app.
 
 > Pedro Teixeira has a great introduction book to UI testing:
 http://www.amazon.co.uk/Using-Node-js-Testing-Pedro-Teixeira/dp/1782160523/
