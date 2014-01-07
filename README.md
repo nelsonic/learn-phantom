@@ -98,7 +98,7 @@ page.open(url, function() {
 - https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage#wiki-webpage-evaluate
 
 
-## Specify Viewport Width/Heigh (for Mobile Web Testing)
+## Specify Viewport Width/Heigh (Mobile Apps)
 
 ```
 var page = require('webpage').create(),
@@ -124,8 +124,9 @@ Might need to re-think my plan to take a screenshot for *every* action/test...
 This could become expensive (image storage!) :-(
 Cross that bridge when we get there. 
 Back of the envelope calculation:
-110 kb x **100k images** = (110,000 x 100,000) = 11,000,000,000
-**11Gb** is 10 cents per month. its *all* good.
+110 kb x **100** ***Thousand*** **images** = (110,000 x 100,000) = 11,000,000,000
+**11Gb** is 10 cents per month on [S3](http://aws.amazon.com/s3/pricing/). 
+its *all* good.
 
 ## Useful Links
 

@@ -6,13 +6,34 @@
   <title>Hello PhantomJS!</title>
 </head>
 <body>
+<!-- <iframe width="640" height="960" src="http://fiddle.jshell.net/nelsonic/qdvvx/show/"></iframe> -->
+<iframe id="ipad" src="http://nelsonic.s3.amazonaws.com/range-touch/index.html" frameborder="0" width="1024" height="768"></iframe>
+<iframe id="ipad" src="http://nelsonic.s3.amazonaws.com/range-touch/index.html" frameborder="0" width="640" height="960"></iframe>
 
-<button id="color">change color</button>
 
-<script>
-  document.getElementById('color').addEventListener('click', function(event) {
-    document.body.style.backgroundColor = 'lightblue';
-  }, false);
+<!-- <button id="color">change color</button> -->
+
+<style>
+iframe {
+  z-index: 10;
+  border: 40px solid black;
+  border-radius: 40px;
+  margin-left: 30px;
+}
+body {
+  /*background-color: red;*/
+}
+</style>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.1/zepto.min.js"></script>
+<script type="text/javascript">
+  $( function() {
+    var frames = $('iframe');
+    $.each(frames, function(index, item){
+          console.log(item);
+    });
+
+  });
 </script>
 
 </body>
